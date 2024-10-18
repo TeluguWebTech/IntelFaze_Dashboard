@@ -1,7 +1,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, ResponsiveContainer } from 'recharts';
 import WorldMap from './WorldMap';
-import '../css/tileSection.css';
+// import '../css/tileSection.css';
 
 const revenueData = [
   { name: 'Week 1', Outerwear: 400, Sweaters: 240, Shirts: 240 },

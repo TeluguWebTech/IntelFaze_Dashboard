@@ -1,7 +1,7 @@
 import React from 'react';
 import Flag from 'react-world-flags';
 
-import "../css/countrygraph.css"
+// import "../css/countrygraph.css"
 
 const countryData = [
   { country: 'Russia', code: 'RU', value: 80 },

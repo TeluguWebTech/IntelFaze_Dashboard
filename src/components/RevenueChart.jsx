@@ -3,7 +3,7 @@ import ReactApexChart from 'react-apexcharts';
 import { HiArrowUpRight } from "react-icons/hi2";
 import SemiTiles from './SemiTiles';
 
-import "../css/revenuechart.css"
+// import "../css/revenuechart.css"
 import SubCharts from './SubChart';
 
 const RevenueChart = () => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaBell, FaUserCircle } from 'react-icons/fa';
 
-import '../css/topbar.css'
+// import '../css/topbar.css'
 
 const TopBar = () => {
   return (

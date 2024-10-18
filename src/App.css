@@ -1,47 +1,843 @@
-.app-container {
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .sidebarSection {
+/* Country */
+.country-graph {
+  width: 300px;
+  margin-left: 50px;
+}
+
+.country-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.country-info {
+  display: flex;
+  align-items: center;
+}
+
+.country-name {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.bar-container {
+  flex: 1;
+  height: 8px;
+  background-color: #e0e0e0;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+.bar {
+  height: 100%;
+  border-radius: 4px;
+}
+/* revenuechart.css */
+.revenueSection {
+  padding-top: 20px;
+  padding-left: 10px;
+  width: 55vw;
+  position: relative;
+  left: 250px;
+  top: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.semiTile{
+  width: 100%;
+}
+
+/* Info section next to the graph */
+.chartInfo {
+  display: flex;
+  gap: 10px;
+}
+
+/* Style for each info box */
+.infoGraph {
+  background-color: #007bff;
+  color: white;
+  border-radius: 20px;
+  padding: 2px 20px;
+}
+
+/* Style for the text inside each info box */
+.infoGraph span {
+  border-radius: 50%;
+  color: black;
+}
+
+/* Style for the arrow icon */
+.arrowIcon {
+  margin-left: -10px;
+  color: white;
+}
+
+/* Chart title container */
+.chartTitle {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  gap: 10px;
+}
+.revBarChart{
+  width: 400px;
+}
+
+/* Style for the chart title image */
+.chartTitle img {
+  width: 100%;
+}
+
+/* Make the layout vertical on smaller screens */
+@media screen and (max-width: 768px) {
+  .revenueSection {
+    flex-direction: column; /* Stack elements vertically */
+    width: 90vw; /* Adjust width to fit small screens */
+    left: 0; /* Reset the left position */
+    top: 0; /* Reset the top position */
+    padding-left: 0; /* Remove unnecessary padding */
+    gap: 20px; /* Add some gap between elements */
     position: relative;
-    height: 100%;
-    width: 15vw; /* Default width when open */
-    background-color: white;
-    transition: width 0.3s ease-in-out;
+    top: 200px;
+  }
+  .revBarChart{
+    width: 100%;
+  }
+  .chartTitle {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    gap: 10px;
+    
+    text-align: center;
+    justify-content: center;
+  }
+  /* Style for the chart title image */
+  .chartTitle img {
+    width: 30px;
+  }
+  .chartInfo {
+    flex-direction: column; /* Stack info boxes vertically */
+    gap: 15px; 
+    text-align: center;
+
+  }
+
+  .infoGraph {
+    width: 100%; /* Make info boxes take full width */
+    padding: 10px; /* Increase padding for better touch experience */
+  }
+
+
+}
+
+/* Further adjustments for extra small screens (mobile) */
+@media screen and (max-width: 480px) {
+  .revenueSection {
+    width: 100vw; 
+    
+    position: relative;
+    top: 400px;
+
+  }
+  .chartTitle {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    gap: 10px;
+    
+    text-align: center;
+    justify-content: center;
+  }
+  /* Style for the chart title image */
+  .chartTitle img {
+    width: 30px;
+  }
+
+  .chartInfo {
+    gap: 10px;
+    
+    text-align: center;
+  }
+
+  .infoGraph {
+    padding: 8px 15px; 
+    
+  }
+
+
+}
+/* semitiles.css */
+
+.revenue-cards{
+  display: flex;
+  width: 30%;
+  position: relative;
+  left: 250px;
+}
+
+.revenue-card {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  justify-content: space-between;
+}
+
+.card-icon {
+  font-size: 10px;
+  color: #007bff;
+}
+
+.card-content h3 {
+  font-size: 8px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.card-content p {
+  font-size: 8px;
+  color: #777;
+}
+
+.card-menu {
+  font-size: 18px;
+  color: #777;
+}
+
+@media screen and (max-width: 488px) {
+  .revenue-card{
+    display: none;
   }
   
-  .sidebarSection.closed {
-    width: 50px; /* Sidebar width when closed */
+}
+@media screen and (max-width: 768px) {
+  .revenue-card{
+    position: relative;
+    top: 200px;
+    right: 200px;
+    gap: 60px;
+    padding-bottom: 20px;
   }
-  
+}
+/* sidebar.css */
+.sidebarSection {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  color: black;
+  height: 100vh;
+  transition: width 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.logo {
+  width: 150px;
+  position: relative;
+  top: 20px;
+}
+
+.sidebarSection.closed {
+  width: 60px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.sidebar-nav {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-item {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #007bff;
+  color: white;
+  border-radius: 30px;
+}
+
+.nav-icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+.dropdown-icon{
+  margin-left: 20px;
+}
+
+.dropdown-item {
+  padding-left: 30px;
+}
+.sideDropdown{
+  padding-left: 50px;
+}
+
+/* Separate media queries for tablets and mobiles */
+
+/* Tablet view (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sidebarSection {
+    transform: translateX(-100%);
+  }
+
+  .sidebarSection.open {
+    transform: translateX(0);
+  }
+
   .main-content {
-    flex-grow: 1;
-    margin-left: 15vw; /* Align content with sidebar open */
-    transition: margin-left 0.3s ease-in-out;
-    overflow-y: auto;
+    margin-left: 0;
   }
-  
-  .sidebarSection.closed ~ .main-content {
-    margin-left: 50px; /* Align content when sidebar is closed */
+
+  .sidebarSection.open + .main-content {
+    margin-left: 250px;
   }
-  
-  /* Adjustments for mobile */
-  @media (max-width: 768px) {
-    .sidebarSection {
-      position: absolute;
-      width: 250px;
-      transform: translateX(-100%);
-      transition: transform 0.3s ease-in-out;
-    }
-  
-    .sidebarSection.open {
-      transform: translateX(0);
-    }
-  
-    .main-content {
-      margin-left: 0; /* Reset content margin for mobile view */
-    }
+
+  .sidebarSection.closed + .main-content {
+    margin-left: 60px;
   }
+
+  .hamburger-menu {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+}
+
+/* Mobile view (below 768px) */
+@media screen and (max-width: 767px) {
+  .sidebarSection {
+    transform: translateX(-100%);
+  }
+ 
+  .sidebarSection.open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebarSection.open + .main-content {
+    margin-left: 250px;
+  }
+
+  .sidebarSection.closed + .main-content {
+    margin-left: 60px;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+}
+/* subcharts.css */
+
+.subChartSection{
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
   
+  .subApexChart{
+      width: 80%;
+  }
+}
+/* tilesection.css */
+* {
+  box-sizing: border-box;
+}
+.tileSection {
+  width: 55%;
+  margin-left: 15vw;
+  margin-top: 0;
+  display: flex;
+  position: relative;
+  left: 50px;
+  top: 120px;
+}
+
+.overview-section {
+  margin-left: 30px;
+  width: 100%;
+  height: fit-content;
+  padding: 0;
+}
+
+.metricChart {
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+.metrics {
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.metric-box {
+  background-color: #007bff;
+  padding: 20px;
+  padding-bottom: 10px;
+  color: white;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+
+}
+.metCount{
+  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.metric-box h4{
+  font-size: small;
+  
+  width: 150%;
+}
+
+/* Media queries for small screens */
+@media screen and (max-width: 768px) {
+  /* Adjust the tile section to take more width on smaller screens */
+  .tileSection {
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+    top: 120px;
+    display: flex;
+  }
+
+  /* Stack metric-box elements vertically */
+  .metrics {
+    flex-direction: column;
+    gap: 15px; 
+    max-width: 100%;
+  
+  }
+  .metCount{
+      width: 100%;
+    }
+
+  .metric-box {
+    width: 100%; /* Ensure each tile takes full width */
+  }
+  .tileSection > div:last-child {
+      width: 90%;
+      height: 300px;
+      margin-top: 20px;
+      position: relative;
+      left: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+  .tileSection {
+    width: 90%;
+    margin-left: 0;
+    left: 0;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+  }
+.metCount{
+  width: 100%;
+}
+  .metric-box {
+    width: 100%; /* Ensure full width on the smallest screens */
+    padding: 15px; 
+  }
+
+  .metrics {
+    gap: 10px; /* Adjust the gap slightly for small devices */
+   
+  }
+  .tileSection > div:last-child {
+      width: 90%;
+      height: 300px;
+      margin-top: 20px;
+      position: relative;
+      left: 10px;
+    }
+}
+/* topbar.css */
+/* General styling for the top bar */
+
+.topBarSection {
+  width: calc(100% - 230px); /* Adjust width relative to sidebar */
+  background-color: #f8f9fa;
+  padding: 10px 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 250px; /* Start right after sidebar */
+  box-sizing: border-box;
+  transition: left 0.3s, width 0.3s; 
+  z-index: 100;
+  height: 100px;
+}
+
+.header-search{
+  width: 50%;
+}
+.header-search input{
+  width: 100%;
+  border-radius: 40px;
+  border: 1px solid gray;
+  height: 30px;
+}
+
+/* When the sidebar is closed */
+.sidebar-closed .topBarSection {
+  width: 100%; /* Full width when sidebar is hidden */
+  left: 0; /* Move top bar to the left (full width) */
+}
+
+/* Top bar header container */
+.dashboard-header {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Left side with input and navigation */
+.header-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 30px;
+  position: relative;
+  top: -50px;
+}
+
+/* Styling the search input */
+.header-left input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%; /* Full width for input */
+  box-sizing: border-box;
+}
+
+/* Navigation section */
+.header-left nav {
+  display: flex;
+  gap: 15px;
+  width: 100%; /* Ensure full width for navigation */
+  justify-content: flex-start;
+  flex-wrap: wrap; /* Allow links to wrap to next line if needed */
+}
+
+/* Styling for navigation links */
+.header-left nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.header-left nav a:hover {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Right section with icons */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+  width: fit-content;
+  justify-content: flex-end; 
+  float: right;
+}
+
+/* Icon styling */
+.header-right .icon {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Admin text next to the icon */
+.header-right span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Responsive design for medium screens (tablets and small desktops) */
+@media (max-width: 992px) {
+  .topBarSection {
+      width: 100%;
+      left: 0; /* Take full width on smaller screens */
+      padding: 10px 20px;
+      max-width: 98%;
+  }
+
+
+  .header-left input {
+      width: 100%; /* Full width for tablets */
+  }
+
+  .header-left nav a {
+      font-size: 14px;
+      padding: 6px 10px;
+  }
+
+  .header-right span {
+      font-size: 14px;
+  }
+
+  .header-right .icon {
+      font-size: 22px;
+  }
+}
+
+/* Responsive design for smaller screens (mobile) */
+@media (max-width: 768px) {
+  .topBarSection {
+    width: 100%;
+    left: 0; /* Take full width on smaller screens */
+    padding: 10px 20px;
+    max-width: 99%;
+  padding-left: 50px;
+
+}
+.header-search{
+  margin-left: 60px;
+}
+
+
+  .dashboard-header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .header-left input {
+      width: 100%; /* Full width for mobile */
+  }
+
+  .header-left nav {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+  }
+
+  .header-right {
+      width: 100%;
+      justify-content: flex-end;
+  }
+}
+
+/* Responsive design for extra small screens (very small mobile) */
+@media (max-width: 576px) {
+  .topBarSection {
+    width: 100%;
+    left: 0; /* Take full width on smaller screens */
+    padding: 10px 20px;
+    max-width: 98%;
+    height: 120px;
+}
+.header-search{
+  display: none;
+}
+.header-right{
+  width: fit-content;
+}
+.header-left{
+  padding: 5px;
+  padding-top: 10px;
+  gap: 0;
+}
+  .header-left nav{
+    padding-left: 40px;
+  }
+
+  .header-right span {
+      display: none; /* Hide "Admin" label on very small screens */
+  }
+
+  .header-right .icon {
+      font-size: 20px; /* Adjust icon size */
+  }
+}
+/* topproducts.css */
+.chat-card {
+  width: 300px;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.chat-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.chat-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  padding: 4px 0;
+  text-decoration: none;
+  color: #333;
+}
+
+.avatar-container {
+  position: relative;
+  width: 24px; /* Smaller avatar */
+  height: 24px;
+  margin-right: 6px;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 6px; /* Smaller status dot */
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.chat-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tableSection{
+  display: flex;
+  justify-content: space-around;
+}
+
+.chat-name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1; /* Reduced line height */
+}
+
+.chat-message {
+  font-size: 10px; /* Smaller text size */
+  color: #555;
+  line-height: 1;
+}
+
+.chat-time {
+  font-size: 9px;
+  color: #aaa;
+  margin-left: 3px;
+}
+
+.chat-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background-color: #007bff;
+  color: white;
+  font-size: 10px;
+  border-radius: 50%;
+}
+
+.chat-link:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 576px){
+   .tableSection{
+    
+    display: flex;
+    justify-content: space-between;
+   }
+}
+@media (max-width: 768px){
+   .chat-card{
+    
+    width: 100%;
+
+   }
+   .tableSection{
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+   }
+}
+/* worldmap.css */
+* {
+  box-sizing: border-box;
+}
+.worldMapSection{
+  position: absolute;
+  max-width: 300px;
+}
+.countryInfo{
+margin: 0;
+position: relative;
+top: 50px;
+left: 30px;
+color: rgb(80, 64, 64);
+}
+.infoLabel{
+display: flex;
+gap: 20px;
+position: relative;
+top: 30px;
+left: 20px;
+bottom: 10px;
+background-color: white;
+border-radius: 40px;
+padding: 10px 0;
+padding-left: 20px;
+}
+
+

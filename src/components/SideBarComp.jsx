@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaHome, FaBox, FaFileInvoice, FaEnvelope, FaCalendarAlt, FaCogs, FaUsers, FaChevronDown, FaChevronUp, FaBars } from 'react-icons/fa'; // React Icons for the icons
-import '../css/sidebar.css';
+// import '../css/sidebar.css';
 
 const SideBarComp = () => {
   const [isOpen, setIsOpen] = useState(true); // Sidebar open by default on large screens

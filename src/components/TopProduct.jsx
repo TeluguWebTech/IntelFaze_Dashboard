@@ -4,7 +4,7 @@ import UserThree from '../images/user/user-03.png';
 import UserFour from '../images/user/user-04.png';
 import UserFive from '../images/user/user-05.png';
 
-import "../css/topproduct.css"
+// import "../css/topproduct.css"
 
 const chatData = [
   {

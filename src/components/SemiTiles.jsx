@@ -3,7 +3,7 @@ import { FaShoppingCart, FaChartLine, FaUserAlt } from 'react-icons/fa';
 import { Tooltip as ReactTooltip } from 'react-tooltip';  // Update this line for the correct import
 import 'react-tooltip/dist/react-tooltip.css'; // Import CSS if needed for styling
 
-import "../css/semitiles.css"
+// import "../css/semitiles.css"
 
 const SemiTiles = () => {
   return (

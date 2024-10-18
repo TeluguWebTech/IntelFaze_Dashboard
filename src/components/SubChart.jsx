@@ -3,7 +3,7 @@ import ReactApexChart from 'react-apexcharts';
 import TopProduct from './TopProduct';
 import { HiArrowUpRight } from "react-icons/hi2";
 
-import "../css/subcharts.css"
+// import "../css/subcharts.css"
 
 const SubCharts = () => {
   const chartOptions = {

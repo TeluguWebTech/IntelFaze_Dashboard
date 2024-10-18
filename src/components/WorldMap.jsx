@@ -2,7 +2,7 @@ import React from "react";
 import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
 import CountryGraph from "./CountryChart";
 
-import "../css/worldmap.css"
+// import "../css/worldmap.css"
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
