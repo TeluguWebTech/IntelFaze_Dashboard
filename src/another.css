@@ -1,0 +1,63 @@
+.tileSection {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .overview-section {
+    width: 65%; /* Allow space for the WorldMap */
+  }
+  
+  .metrics {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .metric-box {
+    background-color: #007bff;
+    padding: 20px;
+    padding-bottom: 10px;
+    color: white;
+    border-radius: 10px;
+    width: 100%; /* Ensures full width in responsive designs */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  
+  .metricChart {
+    width: 100%;
+    height: 100px;
+    display: flex;
+  }
+  
+  /* Media queries for small screens */
+  @media screen and (max-width: 768px) {
+    /* Stack the tiles and WorldMap vertically */
+    .tileSection {
+      flex-direction: column;
+    }
+  
+    .overview-section {
+      width: 100%; /* Take full width */
+    }
+  
+    .metrics {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .metric-box {
+      width: 100%; /* Full width for each tile */
+    }
+  
+    /* Make WorldMap take full width below the tiles */
+    .tileSection > div:last-child {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  

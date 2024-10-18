@@ -1,0 +1,35 @@
+.country-graph {
+    width: 300px;
+    margin-left: 50px;
+  }
+  
+  .country-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .country-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .country-name {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .bar-container {
+    flex: 1;
+    height: 8px;
+    background-color: #e0e0e0;
+    margin-left: 10px;
+    border-radius: 4px;
+  }
+  
+  .bar {
+    height: 100%;
+    border-radius: 4px;
+  }

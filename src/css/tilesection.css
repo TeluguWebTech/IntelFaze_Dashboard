@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+  }
+.tileSection {
+    width: 55%;
+    margin-left: 15vw;
+    margin-top: 0;
+    display: flex;
+    position: relative;
+    left: 50px;
+    top: 120px;
+  }
+  
+  .overview-section {
+    margin-left: 30px;
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+  }
+  
+  .metricChart {
+    width: 100%;
+    height: 100px;
+    display: flex;
+  }
+  
+  .metrics {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .metric-box {
+    background-color: #007bff;
+    padding: 20px;
+    padding-bottom: 10px;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+
+  }
+  .metCount{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .metric-box h4{
+    font-size: small;
+    
+    width: 150%;
+  }
+  
+  /* Media queries for small screens */
+  @media screen and (max-width: 768px) {
+    /* Adjust the tile section to take more width on smaller screens */
+    .tileSection {
+      width: 100%;
+      margin-left: 0;
+      left: 0;
+      top: 120px;
+      display: flex;
+    }
+  
+    /* Stack metric-box elements vertically */
+    .metrics {
+      flex-direction: column;
+      gap: 15px; 
+      max-width: 100%;
+    
+    }
+    .metCount{
+        width: 100%;
+      }
+  
+    .metric-box {
+      width: 100%; /* Ensure each tile takes full width */
+    }
+    .tileSection > div:last-child {
+        width: 90%;
+        height: 300px;
+        margin-top: 20px;
+        position: relative;
+        left: 10px;
+      }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .tileSection {
+      width: 90%;
+      margin-left: 0;
+      left: 0;
+      top: 150px;
+      display: flex;
+      flex-direction: column;
+    }
+  .metCount{
+    width: 100%;
+  }
+    .metric-box {
+      width: 100%; /* Ensure full width on the smallest screens */
+      padding: 15px; 
+    }
+  
+    .metrics {
+      gap: 10px; /* Adjust the gap slightly for small devices */
+     
+    }
+    .tileSection > div:last-child {
+        width: 90%;
+        height: 300px;
+        margin-top: 20px;
+        position: relative;
+        left: 10px;
+      }
+  }
+  

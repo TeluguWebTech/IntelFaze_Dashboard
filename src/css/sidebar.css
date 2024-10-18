@@ -1,0 +1,131 @@
+.sidebarSection {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  color: black;
+  height: 100vh;
+  transition: width 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.logo {
+  width: 150px;
+  position: relative;
+  top: 20px;
+}
+
+.sidebarSection.closed {
+  width: 60px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.sidebar-nav {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-item {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #007bff;
+  color: white;
+  border-radius: 30px;
+}
+
+.nav-icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+.dropdown-icon{
+  margin-left: 20px;
+}
+
+.dropdown-item {
+  padding-left: 30px;
+}
+.sideDropdown{
+  padding-left: 50px;
+}
+
+/* Separate media queries for tablets and mobiles */
+
+/* Tablet view (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sidebarSection {
+    transform: translateX(-100%);
+  }
+
+  .sidebarSection.open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebarSection.open + .main-content {
+    margin-left: 250px;
+  }
+
+  .sidebarSection.closed + .main-content {
+    margin-left: 60px;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+}
+
+/* Mobile view (below 768px) */
+@media screen and (max-width: 767px) {
+  .sidebarSection {
+    transform: translateX(-100%);
+  }
+ 
+  .sidebarSection.open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebarSection.open + .main-content {
+    margin-left: 250px;
+  }
+
+  .sidebarSection.closed + .main-content {
+    margin-left: 60px;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+}

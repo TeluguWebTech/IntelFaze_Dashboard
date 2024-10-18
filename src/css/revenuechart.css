@@ -1,0 +1,135 @@
+.revenueSection {
+  padding-top: 20px;
+  padding-left: 10px;
+  width: 55vw;
+  position: relative;
+  left: 250px;
+  top: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.semiTile{
+  width: 100%;
+}
+
+/* Info section next to the graph */
+.chartInfo {
+  display: flex;
+  gap: 10px;
+}
+
+/* Style for each info box */
+.infoGraph {
+  background-color: #007bff;
+  color: white;
+  border-radius: 20px;
+  padding: 2px 20px;
+}
+
+/* Style for the text inside each info box */
+.infoGraph span {
+  border-radius: 50%;
+  color: black;
+}
+
+/* Style for the arrow icon */
+.arrowIcon {
+  margin-left: -10px;
+  color: white;
+}
+
+/* Chart title container */
+.chartTitle {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  gap: 10px;
+}
+.revBarChart{
+  width: 400px;
+}
+
+/* Style for the chart title image */
+.chartTitle img {
+  width: 100%;
+}
+
+/* Make the layout vertical on smaller screens */
+@media screen and (max-width: 768px) {
+  .revenueSection {
+    flex-direction: column; /* Stack elements vertically */
+    width: 90vw; /* Adjust width to fit small screens */
+    left: 0; /* Reset the left position */
+    top: 0; /* Reset the top position */
+    padding-left: 0; /* Remove unnecessary padding */
+    gap: 20px; /* Add some gap between elements */
+    position: relative;
+    top: 200px;
+  }
+  .revBarChart{
+    width: 100%;
+  }
+  .chartTitle {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    gap: 10px;
+    
+    text-align: center;
+    justify-content: center;
+  }
+  /* Style for the chart title image */
+  .chartTitle img {
+    width: 30px;
+  }
+  .chartInfo {
+    flex-direction: column; /* Stack info boxes vertically */
+    gap: 15px; 
+    text-align: center;
+
+  }
+
+  .infoGraph {
+    width: 100%; /* Make info boxes take full width */
+    padding: 10px; /* Increase padding for better touch experience */
+  }
+
+
+}
+
+/* Further adjustments for extra small screens (mobile) */
+@media screen and (max-width: 480px) {
+  .revenueSection {
+    width: 100vw; 
+    
+    position: relative;
+    top: 400px;
+
+  }
+  .chartTitle {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    gap: 10px;
+    
+    text-align: center;
+    justify-content: center;
+  }
+  /* Style for the chart title image */
+  .chartTitle img {
+    width: 30px;
+  }
+
+  .chartInfo {
+    gap: 10px;
+    
+    text-align: center;
+  }
+
+  .infoGraph {
+    padding: 8px 15px; 
+    
+  }
+
+
+}

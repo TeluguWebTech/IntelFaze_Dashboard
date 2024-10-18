@@ -1,0 +1,204 @@
+/* General styling for the top bar */
+
+.topBarSection {
+  width: calc(100% - 230px); /* Adjust width relative to sidebar */
+  background-color: #f8f9fa;
+  padding: 10px 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 250px; /* Start right after sidebar */
+  box-sizing: border-box;
+  transition: left 0.3s, width 0.3s; 
+  z-index: 100;
+  height: 100px;
+}
+
+.header-search{
+  width: 50%;
+}
+.header-search input{
+  width: 100%;
+  border-radius: 40px;
+  border: 1px solid gray;
+  height: 30px;
+}
+
+/* When the sidebar is closed */
+.sidebar-closed .topBarSection {
+  width: 100%; /* Full width when sidebar is hidden */
+  left: 0; /* Move top bar to the left (full width) */
+}
+
+/* Top bar header container */
+.dashboard-header {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Left side with input and navigation */
+.header-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 30px;
+  position: relative;
+  top: -50px;
+}
+
+/* Styling the search input */
+.header-left input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%; /* Full width for input */
+  box-sizing: border-box;
+}
+
+/* Navigation section */
+.header-left nav {
+  display: flex;
+  gap: 15px;
+  width: 100%; /* Ensure full width for navigation */
+  justify-content: flex-start;
+  flex-wrap: wrap; /* Allow links to wrap to next line if needed */
+}
+
+/* Styling for navigation links */
+.header-left nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.header-left nav a:hover {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Right section with icons */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+  width: fit-content;
+  justify-content: flex-end; 
+  float: right;
+}
+
+/* Icon styling */
+.header-right .icon {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Admin text next to the icon */
+.header-right span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Responsive design for medium screens (tablets and small desktops) */
+@media (max-width: 992px) {
+  .topBarSection {
+      width: 100%;
+      left: 0; /* Take full width on smaller screens */
+      padding: 10px 20px;
+      max-width: 98%;
+  }
+
+
+  .header-left input {
+      width: 100%; /* Full width for tablets */
+  }
+
+  .header-left nav a {
+      font-size: 14px;
+      padding: 6px 10px;
+  }
+
+  .header-right span {
+      font-size: 14px;
+  }
+
+  .header-right .icon {
+      font-size: 22px;
+  }
+}
+
+/* Responsive design for smaller screens (mobile) */
+@media (max-width: 768px) {
+  .topBarSection {
+    width: 100%;
+    left: 0; /* Take full width on smaller screens */
+    padding: 10px 20px;
+    max-width: 99%;
+  padding-left: 50px;
+
+}
+.header-search{
+  margin-left: 60px;
+}
+
+
+  .dashboard-header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .header-left input {
+      width: 100%; /* Full width for mobile */
+  }
+
+  .header-left nav {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+  }
+
+  .header-right {
+      width: 100%;
+      justify-content: flex-end;
+  }
+}
+
+/* Responsive design for extra small screens (very small mobile) */
+@media (max-width: 576px) {
+  .topBarSection {
+    width: 100%;
+    left: 0; /* Take full width on smaller screens */
+    padding: 10px 20px;
+    max-width: 98%;
+    height: 120px;
+}
+.header-search{
+  display: none;
+}
+.header-right{
+  width: fit-content;
+}
+.header-left{
+  padding: 5px;
+  padding-top: 10px;
+  gap: 0;
+}
+  .header-left nav{
+    padding-left: 40px;
+  }
+
+  .header-right span {
+      display: none; /* Hide "Admin" label on very small screens */
+  }
+
+  .header-right .icon {
+      font-size: 20px; /* Adjust icon size */
+  }
+}
